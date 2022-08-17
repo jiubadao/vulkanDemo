@@ -82,8 +82,8 @@ public:
 	//glm::vec3 rotations[object_instances_count];
 	//glm::vec3 rotationSpeeds[object_instances_count];
 
-	std::vector<glm::vec3> * rotations  = nullptr;
-	std::vector<glm::vec3> * rotationSpeeds = nullptr;
+	std::vector<glm::vec3> rotations  ;
+	std::vector<glm::vec3> rotationSpeeds ;
 
 	// One big uniform buffer that contains all matrices
 	// Note that we need to manually allocate the data to cope for GPU-specific uniform buffer offset alignments
@@ -132,7 +132,7 @@ public:
 
     void ChangeObjectInstanceCount(uint32_t count){
         object_instances_count = count;
-        if(  rotations ){
+      /*  if(  rotations ){
             delete rotations;
             rotations = nullptr;
 
@@ -141,9 +141,10 @@ public:
             delete rotationSpeeds;
             rotationSpeeds = nullptr;
 
-        }
-
-        prepareUniformBuffers();
+        }*/
+        rotations.clear();
+        rotationSpeeds.clear();
+		prepareUniformBuffers();
     }
 
 	void buildCommandBuffers()
@@ -459,22 +460,24 @@ public:
 		// Prepare per-object matrices with offsets and random rotations
 		std::default_random_engine rndEngine(benchmark.active ? 0 : (unsigned)time(nullptr));
 		std::normal_distribution<float> rndDist(-1.0f, 1.0f);
-        if(  rotations == nullptr){
-            rotations = new std::vector<glm::vec3>(object_instances_count);
-            LOGCATI("zwtest rotations  object_instances_count %d",object_instances_count);
-
-        }
-        if(  rotationSpeeds == nullptr){
-            rotationSpeeds = new std::vector<glm::vec3>(object_instances_count);
-            LOGCATI("zwtest rotationSpeeds  object_instances_count %d",object_instances_count);
-
-        }
+//        if(  rotations == nullptr){
+//            rotations = new std::vector<glm::vec3>(object_instances_count);
+//            LOGCATI("zwtest rotations  object_instances_count %d",object_instances_count);
+//
+//        }
+//        if(  rotationSpeeds == nullptr){
+//            rotationSpeeds = new std::vector<glm::vec3>(object_instances_count);
+//            LOGCATI("zwtest rotationSpeeds  object_instances_count %d",object_instances_count);
+//
+//        }
 		for (uint32_t i = 0; i < object_instances_count; i++) {
-			rotations->push_back(glm::vec3(rndDist(rndEngine), rndDist(rndEngine), rndDist(rndEngine)) * 2.0f * (float)M_PI);
-			rotationSpeeds->push_back(glm::vec3(rndDist(rndEngine), rndDist(rndEngine), rndDist(rndEngine)));
+//			rotations->push_back(glm::vec3(rndDist(rndEngine), rndDist(rndEngine), rndDist(rndEngine)) * 2.0f * (float)M_PI);
+//			rotationSpeeds->push_back(glm::vec3(rndDist(rndEngine), rndDist(rndEngine), rndDist(rndEngine)));
+			rotations.push_back(glm::vec3(rndDist(rndEngine), rndDist(rndEngine), rndDist(rndEngine)) * 2.0f * (float)M_PI);
+			rotationSpeeds.push_back(glm::vec3(rndDist(rndEngine), rndDist(rndEngine), rndDist(rndEngine)));
 
 
-            LOGCATI("zwtest  rotations[i].push_bac   index %d  object_instances_count %d  rotations %d",i,object_instances_count,rotations->size());
+         //   LOGCATI("zwtest  rotations[i].push_bac   index %d  object_instances_count %d  rotations %d",i,object_instances_count,rotations->size());
 
         }
 
@@ -517,15 +520,16 @@ public:
 					// Update rotations
 				//	rotations[index] += animationTimer * rotationSpeeds[index];
 
+                    rotations[index] += animationTimer * rotationSpeeds[index];
+                   // LOGCATI("zwtest   updateDynamicUniformBuffer index %d",index);
 
-//
 
                     // Update matrices
 					glm::vec3 pos = glm::vec3(-((dim * offset.x) / 2.0f) + offset.x / 2.0f + x * offset.x, -((dim * offset.y) / 2.0f) + offset.y / 2.0f + y * offset.y, -((dim * offset.z) / 2.0f) + offset.z / 2.0f + z * offset.z);
 					*modelMat = glm::translate(glm::mat4(1.0f), pos);
-					*modelMat = glm::rotate(*modelMat, rotations->at(index).x, glm::vec3(1.0f, 1.0f, 0.0f));
-					*modelMat = glm::rotate(*modelMat,rotations->at(index).y, glm::vec3(0.0f, 1.0f, 0.0f));
-					*modelMat = glm::rotate(*modelMat,rotations->at(index).z, glm::vec3(0.0f, 0.0f, 1.0f));
+					*modelMat = glm::rotate(*modelMat, rotations[index].x, glm::vec3(1.0f, 1.0f, 0.0f));
+					*modelMat = glm::rotate(*modelMat,rotations[index].y, glm::vec3(0.0f, 1.0f, 0.0f));
+					*modelMat = glm::rotate(*modelMat,rotations[index].z, glm::vec3(0.0f, 0.0f, 1.0f));
 				}
 			}
 		}
