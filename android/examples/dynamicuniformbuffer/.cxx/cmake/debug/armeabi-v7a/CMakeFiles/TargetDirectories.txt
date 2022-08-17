@@ -1,0 +1,8 @@
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-app-glue.dir
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/base/CMakeFiles/rebuild_cache.dir
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/base/CMakeFiles/edit_cache.dir
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/base/CMakeFiles/libktx.dir
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/base/CMakeFiles/libbase.dir

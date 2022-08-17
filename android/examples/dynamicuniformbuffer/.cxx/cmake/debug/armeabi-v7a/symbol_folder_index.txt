@@ -1,0 +1,1 @@
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/build/intermediates/cmake/debug/obj/armeabi-v7a

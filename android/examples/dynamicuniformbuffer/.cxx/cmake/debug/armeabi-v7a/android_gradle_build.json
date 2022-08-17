@@ -1,0 +1,82 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/zhangwei/Desktop/vulkanDemo/android/examples/base/CMakeLists.txt",
+    "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/zhangwei/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/zhangwei/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-app-glue-Debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/zhangwei/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a",
+        "native-app-glue"
+      ],
+      "buildType": "debug",
+      "abi": "armeabi-v7a",
+      "artifactName": "native-app-glue",
+      "output": "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a/libnative-app-glue.a"
+    },
+    "libktx-Debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/zhangwei/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a",
+        "libktx"
+      ],
+      "buildType": "debug",
+      "abi": "armeabi-v7a",
+      "artifactName": "libktx",
+      "output": "/Users/zhangwei/Desktop/vulkanDemo/android/examples/base/liblibktx.a"
+    },
+    "native-lib-Debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/zhangwei/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a",
+        "native-lib"
+      ],
+      "buildType": "debug",
+      "abi": "armeabi-v7a",
+      "artifactName": "native-lib",
+      "output": "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
+      "runtimeFiles": [
+        "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibbase.so"
+      ]
+    },
+    "libbase-Debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/zhangwei/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a",
+        "libbase"
+      ],
+      "buildType": "debug",
+      "abi": "armeabi-v7a",
+      "artifactName": "libbase",
+      "output": "/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibbase.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

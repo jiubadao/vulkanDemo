@@ -1,0 +1,2 @@
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/base/CMakeLists.txt
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/CMakeLists.txt

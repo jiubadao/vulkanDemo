@@ -1,0 +1,8 @@
+Executable : /Users/zhangwei/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/zhangwei/Desktop/vulkanDemo/android/examples/dynamicuniformbuffer/.cxx/cmake/debug/armeabi-v7a
+libbase
+native-lib
+jvmArgs : 
+
